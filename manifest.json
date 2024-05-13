@@ -3,7 +3,7 @@
     "short_name": "Lester's Portfolio",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#45505b",
+    "background_color": "#fff",
     "theme_color": "#161B40",
     "icons": [
         {
