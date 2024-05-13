@@ -1,5 +1,5 @@
 {
-    "name": "Lester's Digital Portfolio",
+    "name": "Lester Chico's Digital Portfolio",
     "short_name": "Lester's Portfolio",
     "start_url": "/index.html",
     "display": "standalone",
@@ -7,7 +7,7 @@
     "theme_color": "#161B40",
     "icons": [
         {
-            "src": "assets/img/icon.png",
+            "src": "assets/img/icon-app.png",
             "sizes": "192x192",
             "type": "image/png"
         }
