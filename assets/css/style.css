@@ -1250,12 +1250,7 @@ input[type="text"] {
   font-weight: 300;
 }
 .contact .contact-form textarea {
-  box-shadow: none;
-  background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.1);
   height: 150px;
-  font-size: 18px;
-  font-weight: 300;
 }
 .form-control:active, .form-control:focus {
   outline: none;
