@@ -262,7 +262,9 @@
 
 })()
 
-/**Google recaptcha */
+/**
+ * Google recaptcha 
+ */
 window.onload = function() {
 	var recaptcha = document.forms["Contact Form"]["g-recaptcha-response"];
 	recaptcha.required = true;
