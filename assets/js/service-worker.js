@@ -1,18 +1,7 @@
 const cache_name = 'lesters-portfolio-cache-v1';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/assets/css/animate.css',
-  '/assets/css/bootstrap.css',
-  '/assets/css/bootstrap.css.map',
-  '/assets/css/flexslider.css',
-  '/assets/css/icomoon.css',
-  '/assets/css/main.css',
-  '/assets/css/style.css',
-  '/assets/css/style.css.map',
-  '/assets/fonts',
-  '/assets/img',
-  '/assets/js'
+  '/index.html'
 
 ];
 
