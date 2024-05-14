@@ -1117,9 +1117,9 @@ input[type="text"] {
   color: #161B40;
 }
 .btn-primary:focus:not(:active) {
-  background: #fff !important;
+  background: #161B40 !important;
   border-color: #161B40 !important;
-  color: #161B40;
+  color: #fff;
 }
 .btn-primary.btn-outline {
   background: transparent;
