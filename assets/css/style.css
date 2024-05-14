@@ -1116,15 +1116,10 @@ input[type="text"] {
   border-color: #161B40 !important;
   color: #161B40;
 }
-.btn-primary:hover:not(:active) {
+.btn-primary:focus:not(:active) {
   background: #fff !important;
   border-color: #161B40 !important;
   color: #161B40;
-}
-.btn-primary:focus:not(:active) {
-  background: #161B40 !important;
-  border-color: #161B40 !important;
-  color: #fff;
 }
 .btn-primary.btn-outline {
   background: transparent;
