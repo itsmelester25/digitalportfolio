@@ -1130,6 +1130,10 @@ input[type="text"] {
   background: #161B40;
   color: #fff;
 }
+.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:not(:active) {
+  background: #161B40;
+  color: #fff;
+}
 
 .btn-success {
   background: #5cb85c;
