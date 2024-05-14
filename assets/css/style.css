@@ -1121,11 +1121,6 @@ input[type="text"] {
   border-color: #161B40 !important;
   color: #161B40;
 }
-.btn-primary:focus:not(:active) {
-  background: #fff !important;
-  border-color: #161B40 !important;
-  color: #161B40;
-}
 .btn-primary.btn-outline {
   background: transparent;
   color: #161B40;
