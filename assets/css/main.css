@@ -55,6 +55,7 @@ h6 {
 .back-to-top:hover {
   background: #fff;
   color: #161B40;
+  border: 1px solid #161B40;
 }
 
 .back-to-top.active {
@@ -1194,6 +1195,7 @@ section {
 #footer .social-links a:hover {
   background: #fff;
   color: #161B40;
+  border: 1px solid #161B40;
   text-decoration: none;
 }
 
