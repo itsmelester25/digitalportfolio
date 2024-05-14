@@ -1116,9 +1116,9 @@ input[type="text"] {
   border-color: #161B40 !important;
   color: #161B40;
 }
-.btn-primary:hover:not(:active) {
-  background: #fff !important;
-  border-color: #161B40 !important;
+.btn-primary:hover, .btn-primary:focus:not(:active) {
+  background: #161B40 !important;
+  border-color: #fff !important;
   color: #161B40;
 }
 .btn-primary.btn-outline {
@@ -1127,10 +1127,6 @@ input[type="text"] {
   border: 2px solid #161B40;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #161B40;
-  color: #fff;
-}
-.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:not(:active) {
   background: #161B40;
   color: #fff;
 }
