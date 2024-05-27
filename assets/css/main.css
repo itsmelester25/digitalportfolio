@@ -1146,6 +1146,58 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Payment Methods
+--------------------------------------------------------------*/
+.payment {
+  padding: 50px 0;
+}
+
+.payment .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.payment .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.payment .payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 50px;
+  justify-items: center;
+}
+
+.payment .payment-methods .img-container {
+  position: relative;
+  width: 100%;
+  max-width: 150px;
+  background-color: #161B40;
+}
+
+.payment .payment-methods img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  /*filter: grayscale(100%);
+  mix-blend-mode: multiply;*/
+}
+
+@media (min-width: 600px) {
+  .payment .payment-methods img {
+      max-width: 200px;
+  }
+}
+
+@media (min-width: 900px) {
+  .payment .payment-methods img {
+      max-width: 250px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
