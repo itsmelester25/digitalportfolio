@@ -97,7 +97,15 @@ input:checked + .slider #moon-icon {
     background: #121212;
     border: 1px solid #fff;
   }
+
+  ::selection {
+    color: #121212;
+    background: #fff;
+  }
   
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
   body.dark-mode .back-to-top:hover {
     background: #fff;
     color: #121212;
@@ -110,7 +118,10 @@ input:checked + .slider #moon-icon {
   body.dark-mode .back-to-top:hover i {
     color: #121212;
   }
-  
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
   body.dark-mode #preloader {
     background: #121212;
   }
@@ -120,7 +131,10 @@ input:checked + .slider #moon-icon {
     border-top-color: #121212;
     border-bottom-color: #121212;
   }
-  
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
   body.dark-mode  .nav-menu a:hover,
   body.dark-mode .nav-menu .active,
   body.dark-mode .nav-menu .active:focus,
@@ -134,6 +148,9 @@ input:checked + .slider #moon-icon {
     background-color: #5A5A5A;
   }
 
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/  
   body.dark-mode #hero {
     filter: grayscale(50%);
   }
@@ -149,7 +166,10 @@ input:checked + .slider #moon-icon {
   body.dark-mode #hero .social-links a:hover {
     color: #fff;
   }
-  
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/  
   body.dark-mode .section-title h2 {
     color: #fff;
   }
@@ -158,6 +178,9 @@ input:checked + .slider #moon-icon {
     background: #fff;
   }
 
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
   body.dark-mode .about .content h3 {
     color: #fff;
   }
@@ -166,6 +189,13 @@ input:checked + .slider #moon-icon {
     color: #fff;
   }
   
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+  body.dark-mode .facts .count-box {
+    background: transparent;
+  }
+
   body.dark-mode .facts .count-box i {
     background: #fff;
     color: #121212;
@@ -175,6 +205,9 @@ input:checked + .slider #moon-icon {
     color: #fff;
   }
 
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/  
   body.dark-mode .skills .progress .skill  {
     color: #fff;
   }
@@ -183,6 +216,9 @@ input:checked + .slider #moon-icon {
     background-color: #5A5A5A;
   }
   
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/  
   body.dark-mode .resume .resume-title {
     color: #fff;
   }
@@ -200,8 +236,11 @@ input:checked + .slider #moon-icon {
     border: 2px solid #fff;
   }
 
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
   body.dark-mode #portfolio-flters {
-    background: #5A5A5A;
+    background: transparent;
   }
 
   body.dark-mode #portfolio-flters li {
@@ -210,17 +249,23 @@ input:checked + .slider #moon-icon {
 
   body.dark-mode .portfolio #portfolio-flters li:hover,
   .portfolio #portfolio-flters li.filter-active {
-    color: #121212;
+    color: #5A5A5A;
   }
 
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
   body.dark-mode .services .icon-box {
-    background: #5A5A5A;
+    background: transparent;
   }
 
   body.dark-mode .services .icon-box h4 a {
     color: #fff;
   }
 
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
   body.dark-mode .testimonials .testimonial-item h3 {
     color: #fff;
   }
@@ -236,6 +281,13 @@ input:checked + .slider #moon-icon {
 
   body.dark-mode .testimonials .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #5A5A5A;
+  }
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+  body.dark-mode .contact .info {
+    background: transparent;
   }
 
   body.dark-mode .contact .info i {
@@ -293,6 +345,9 @@ input:checked + .slider #moon-icon {
     color: #121212;
   }
 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
   body.dark-mode #footer h3 {
     color: #fff;
   }
