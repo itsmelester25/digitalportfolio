@@ -129,14 +129,9 @@ input:checked + .slider #moon-icon {
     background: #5A5A5A;
   }
 
-  body.dark-mode .mobile-nav-active {
-    color: #121212;
-    background-color: #fff;
-  }
-
-  body.dark-mode .mobile-nav-toggle {
-    color: #121212;
-    background-color: #fff;
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    background-color: #5A5A5A;
   }
 
   body.dark-mode #hero {
