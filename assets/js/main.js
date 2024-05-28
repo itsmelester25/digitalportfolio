@@ -4,6 +4,36 @@
   /**
    * Easy selector helper function
    */
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const toggleSwitch = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+    const toggleText = document.getElementById('toggle-text');
+
+    if (currentTheme) {
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            toggleSwitch.checked = true;
+            toggleText.textContent = '';
+        }
+    }
+
+    toggleSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+            toggleText.textContent = '';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-mode');
+            toggleText.textContent = '';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+  /**
+   * Easy selector helper function
+   */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {

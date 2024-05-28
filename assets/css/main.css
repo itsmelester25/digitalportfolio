@@ -439,7 +439,7 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .facts .count-box i {
@@ -1012,7 +1012,7 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .contact .info i {

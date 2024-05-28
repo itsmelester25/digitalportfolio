@@ -1,0 +1,334 @@
+/*--------------------------------------------------------------
+# Light Mode
+--------------------------------------------------------------*/
+body {
+    background-color: #ffffff;
+    color: #121212;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .toggle-container {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #161B40;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #121212;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  #sun-icon, #moon-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: opacity 0.4s;
+}
+
+#sun-icon {
+    left: 7.5px;
+    color: #f39c12;
+    opacity: 1;
+}
+
+#moon-icon {
+    right: 6px;
+    color: #f1c40f;
+    opacity: 0;
+}
+
+input:checked + .slider #sun-icon {
+    opacity: 0;
+}
+
+input:checked + .slider #moon-icon {
+    opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  body.dark-mode .back-to-top {
+    background: #121212;
+    border: 1px solid #fff;
+  }
+  
+  body.dark-mode .back-to-top:hover {
+    background: #fff;
+    color: #121212;
+  }
+  
+  body.dark-mode .back-to-top i {
+    color: #fff;
+  }
+  
+  body.dark-mode .back-to-top:hover i {
+    color: #121212;
+  }
+  
+  body.dark-mode #preloader {
+    background: #121212;
+  }
+  
+  body.dark-mode #preloader:before {
+    border: 6px solid #fff;
+    border-top-color: #121212;
+    border-bottom-color: #121212;
+  }
+  
+  body.dark-mode  .nav-menu a:hover,
+  body.dark-mode .nav-menu .active,
+  body.dark-mode .nav-menu .active:focus,
+  body.dark-mode .nav-menu li:hover>a {
+    color: #fff;
+    background: #5A5A5A;
+  }
+
+  body.dark-mode .mobile-nav-active {
+    color: #121212;
+    background-color: #fff;
+  }
+
+  body.dark-mode .mobile-nav-toggle {
+    color: #121212;
+    background-color: #fff;
+  }
+
+  body.dark-mode #hero {
+    filter: grayscale(50%);
+  }
+
+  body.dark-mode #hero h1 {
+    color: #121212;
+  }
+
+  body.dark-mode #hero .social-links a {
+    color: #121212;
+  }
+
+  body.dark-mode #hero .social-links a:hover {
+    color: #fff;
+  }
+  
+  body.dark-mode .section-title h2 {
+    color: #fff;
+  }
+  
+  body.dark-mode .section-title h2::after {
+    background: #fff;
+  }
+
+  body.dark-mode .about .content h3 {
+    color: #fff;
+  }
+
+  body.dark-mode .about .content ul i {
+    color: #fff;
+  }
+  
+  body.dark-mode .facts .count-box i {
+    background: #fff;
+    color: #121212;
+  }
+
+  body.dark-mode .facts .count-box span {
+    color: #fff;
+  }
+
+  body.dark-mode .skills .progress .skill  {
+    color: #fff;
+  }
+
+  body.dark-mode .skills .progress-bar {
+    background-color: #5A5A5A;
+  }
+  
+  body.dark-mode .resume .resume-title {
+    color: #fff;
+  }
+
+  body.dark-mode .resume-item h4 {
+    color: #fff;
+  }
+
+  body.dark-mode .resume .resume-item {
+    border-left: 2px solid #fff;
+  }
+  
+  body.dark-mode .resume .resume-item::before {
+    background: #121212;
+    border: 2px solid #fff;
+  }
+
+  body.dark-mode #portfolio-flters {
+    background: #5A5A5A;
+  }
+
+  body.dark-mode #portfolio-flters li {
+    color: #fff;
+  }
+
+  body.dark-mode .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    color: #121212;
+  }
+
+  body.dark-mode .services .icon-box {
+    background: #5A5A5A;
+  }
+
+  body.dark-mode .services .icon-box h4 a {
+    color: #fff;
+  }
+
+  body.dark-mode .testimonials .testimonial-item h3 {
+    color: #fff;
+  }
+
+  body.dark-mode .testimonials .testimonial-item h4 {
+    color: #fff;
+  }
+
+  body.dark-mode .testimonials .testimonial-item .quote-icon-left,
+  .testimonials .testimonial-item .quote-icon-right {
+    color: #5A5A5A;
+  }
+
+  body.dark-mode .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #5A5A5A;
+  }
+
+  body.dark-mode .contact .info i {
+    color: #fff;
+  }
+
+  body.dark-mode .contact .info i {
+    color: #fff;
+    background-color: #5A5A5A;
+  }
+
+  body.dark-mode .contact .info h4 {
+    color: #fff;
+  }
+
+  body.dark-mode .contact .info p {
+    color: #fff;
+  }
+
+  body.dark-mode .contact .info .email:hover i,
+  .contact .info .address:hover i,
+  .contact .info .phone:hover i {
+    background: #fff;
+    color: #121212;
+  }
+
+  body.dark-mode .form-control {
+    background-color: #fff;
+  }
+
+  body.dark-mode .form-control:active, .form-control:focus {
+    border-color: #5A5A5A;
+  }
+  
+  body.dark-mode .btn-primary {
+    background: #fff;
+    color: #121212;
+    border: 2px solid #5A5A5A;
+  }
+
+  body.dark-mode .btn-primary:hover:active {
+    background: #5A5A5A !important;
+    border-color: #fff !important;
+    color: #fff;
+  }
+
+  body.dark-mode .btn-primary:hover:not(:active) {
+    background: #5A5A5A !important;
+    border-color: #fff !important;
+    color: #fff;
+  }
+
+  body.dark-mode #footer {
+    background: #5A5A5A;
+    color: #121212;
+  }
+
+  body.dark-mode #footer h3 {
+    color: #fff;
+  }
+
+  body.dark-mode #footer p {
+    color: #fff;
+  }
+
+  body.dark-mode #footer .social-links a {
+    background: #fff;
+    color: #121212;
+  }
+
+  body.dark-mode #footer a {
+    color: #fff;
+  }
+
+  body.dark-mode #footer a:hover {
+    color: #121212;
+  }
+
+  body.dark-mode #footer .social-links a:hover {
+    background: #121212;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  body.dark-mode #footer .copyright {
+    color: #fff;
+  }
+
+  body.dark-mode #footer .credits {
+    color: #fff;
+  }
