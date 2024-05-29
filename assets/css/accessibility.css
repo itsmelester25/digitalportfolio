@@ -279,7 +279,7 @@ input:checked + .slider #moon-icon {
     color: #5A5A5A;
   }
 
-  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  body.dark-mode .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
     background-color: #5A5A5A;
     border: 1px solid #fff;
   }
