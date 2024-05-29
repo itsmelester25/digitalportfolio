@@ -248,7 +248,7 @@ input:checked + .slider #moon-icon {
   }
 
   body.dark-mode .portfolio #portfolio-flters li:hover,
-  .portfolio #portfolio-flters li.filter-active {
+  body.dark-mode .portfolio #portfolio-flters li.filter-active {
     color: #5A5A5A;
   }
 
