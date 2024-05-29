@@ -98,7 +98,7 @@ input:checked + .slider #moon-icon {
     border: 1px solid #fff;
   }
 
-  ::selection {
+  body.dark-mode ::selection {
     color: #121212;
     background: #fff;
   }
@@ -143,11 +143,11 @@ input:checked + .slider #moon-icon {
     background: #5A5A5A;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
+  body.dark-mode .mobile-nav-toggle {
     color: #fff;
-    background-color: #5A5A5A;
+    background-color: transparent;
   }
-
+  
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/  
@@ -275,12 +275,20 @@ input:checked + .slider #moon-icon {
   }
 
   body.dark-mode .testimonials .testimonial-item .quote-icon-left,
-  .testimonials .testimonial-item .quote-icon-right {
+  body.dark-mode .testimonials .testimonial-item .quote-icon-right {
     color: #5A5A5A;
   }
 
   body.dark-mode .testimonials .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #5A5A5A;
+  }
+
+  /*--------------------------------------------------------------
+  # Payment Methods
+  --------------------------------------------------------------*/
+  body.dark-mode .payment .payment-methods img {
+    filter: invert(100%);
+    mix-blend-mode: lighten;
   }
 
 /*--------------------------------------------------------------
@@ -308,8 +316,8 @@ input:checked + .slider #moon-icon {
   }
 
   body.dark-mode .contact .info .email:hover i,
-  .contact .info .address:hover i,
-  .contact .info .phone:hover i {
+  body.dark-mode .contact .info .address:hover i,
+  body.dark-mode .contact .info .phone:hover i {
     background: #fff;
     color: #121212;
   }
