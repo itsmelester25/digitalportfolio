@@ -570,6 +570,66 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Certification
+--------------------------------------------------------------*/
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.cert-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.cert-item:hover {
+  transform: scale(1.05);
+}
+
+.cert-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.cert-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  height: auto;
+}
+
+.cert-content h3 {
+  margin: 10px 0 0;
+  font-size: 1.25em;
+  color: #161B40;
+  font-weight: bold;
+}
+
+.cert-content p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.cert-content a {
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #161B40;
+  font-weight: bold;
+}
+
+.cert-content a:hover {
+  color: #121212;
+}
+
+/*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {

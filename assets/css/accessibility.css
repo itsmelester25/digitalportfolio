@@ -237,6 +237,28 @@ input:checked + .slider #moon-icon {
   }
 
 /*--------------------------------------------------------------
+# Certification
+--------------------------------------------------------------*/
+  body.dark-mode .cert-item {
+    background-color: transparent;
+  }
+
+  body.dark-mode .cert-content h3 {
+    color: #fff;
+  }
+  
+  body.dark-mode .cert-content p {
+    color: #5A5A5A;
+  }
+  
+  body.dark-mode .cert-content a {
+    color: #fff;
+  }
+  
+  body.dark-mode .cert-content a:hover {
+    color: #5A5A5A;
+  }
+/*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
   body.dark-mode #portfolio-flters {
