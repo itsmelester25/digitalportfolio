@@ -291,3 +291,63 @@
   new PureCounter();
 
 })()
+
+  /**
+   * Contact Form 
+   */
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    let valid = true;
+
+    form.querySelectorAll('input[required], textarea[required]').forEach(field => {
+      const errorDiv = field.nextElementSibling;
+      if (!field.value.trim()) {
+        errorDiv.textContent = `${field.placeholder} is required.`;
+        errorDiv.style.display = 'block';
+        valid = false;
+      } else if (field.type === "email" && !validateEmail(field.value)) {
+        errorDiv.textContent = 'Please enter a valid email address.';
+        errorDiv.style.display = 'block';
+        valid = false;
+      } else {
+        errorDiv.style.display = 'none';
+      }
+    });
+
+    const recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]').value;
+    if (!recaptchaResponse) {
+      document.getElementById('recaptcha-error').style.display = 'block';
+      valid = false;
+    } else {
+      document.getElementById('recaptcha-error').style.display = 'none';
+    }
+
+    if (valid) {
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/x-www-form-urlencoded',
+        },
+      })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('form-message').style.display = 'block';
+          form.reset();
+        } else {
+          alert('There was a problem with your submission. Please try again.');
+        }
+      })
+      .catch(error => {
+        alert('There was an error submitting the form. Please try again.');
+      });
+    }
+  });
+
+  function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }

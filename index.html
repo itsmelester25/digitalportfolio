@@ -1035,7 +1035,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
             <div class="choose animate-box">
-              <form id="contact-form" name="Contact Form" action="/forms/success.html" method="post" role="form" class="contact-form" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" novalidate>
+              <form id="contact-form" name="Contact Form" action="" method="post" role="form" class="contact-form" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" novalidate>
                 <div class="row form-group">
                   <div class="col-md-6">
                     <input type="text" name="first-name" id="fname" class="form-control" placeholder="Your first name" required>
@@ -1075,71 +1075,10 @@
                 </div>
               </form>
               <div id="form-message" style="display: none; margin-top: 20px;" class="alert alert-success">
-                Your message has been sent successfully!
+                Thank you, I received your message. I will contact you as soon as I can. Have a nice day!
               </div>
             </div>
           </div>
-          
-          <script>
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            let valid = true;
-          
-            // Custom validation for required fields and email format
-            form.querySelectorAll('input[required], textarea[required]').forEach(field => {
-              const errorDiv = field.nextElementSibling;
-              if (!field.value.trim()) {
-                errorDiv.textContent = `${field.placeholder} is required.`;
-                errorDiv.style.display = 'block';
-                valid = false;
-              } else if (field.type === "email" && !validateEmail(field.value)) {
-                errorDiv.textContent = 'Please enter a valid email address.';
-                errorDiv.style.display = 'block';
-                valid = false;
-              } else {
-                errorDiv.style.display = 'none';
-              }
-            });
-          
-            // Validate reCAPTCHA
-            const recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]').value;
-            if (!recaptchaResponse) {
-              document.getElementById('recaptcha-error').style.display = 'block';
-              valid = false;
-            } else {
-              document.getElementById('recaptcha-error').style.display = 'none';
-            }
-          
-            if (valid) {
-              fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                  'Accept': 'application/x-www-form-urlencoded',
-                },
-              })
-              .then(response => {
-                if (response.ok) {
-                  document.getElementById('form-message').style.display = 'block';
-                  form.reset();
-                } else {
-                  alert('There was a problem with your submission. Please try again.');
-                }
-              })
-              .catch(error => {
-                alert('There was an error submitting the form. Please try again.');
-              });
-            }
-          });
-          
-          // Helper function to validate email
-          function validateEmail(email) {
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
-          }
-          </script>
 
         </div>
 
