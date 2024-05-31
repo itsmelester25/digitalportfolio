@@ -292,22 +292,11 @@
 
 })()
 
-/**
- * Google recaptcha 
- */
-window.onload = function() {
-	var recaptcha = document.forms["Contact Form"]["g-recaptcha-response"];
-	recaptcha.required = true;
-	recaptcha.oninvalid = function(e) {
-	  alert("Please check the box, \"I'm not a robot\" in the reCaptcha below.");
-	}
-  }
-
   /**
    * Contact Form 
    */
   document.addEventListener("DOMContentLoaded", function() {
-    var form = document.querySelector('form[name="contact"]');
+    var form = document.querySelector('form[name="Contact Form"]');
     var successMessage = document.getElementById("form-success-message");
 
     form.addEventListener("submit", function(event) {
