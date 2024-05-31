@@ -302,3 +302,35 @@ window.onload = function() {
 	  alert("Please check the box, \"I'm not a robot\" in the reCaptcha below.");
 	}
   }
+
+  /**
+   * Contact Form 
+   */
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector('form[name="contact"]');
+    var successMessage = document.getElementById("form-success-message");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Assuming reCAPTCHA verification and form submission are handled by Netlify
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)).toString()
+        })
+        .then(function(response) {
+            if (response.ok) {
+                form.style.display = "none";
+                successMessage.style.display = "block";
+            } else {
+                // Handle the error response here
+                alert("There was an error submitting the form. Please try again.");
+            }
+        })
+        .catch(function(error) {
+            // Handle the network error here
+            alert("There was a network error. Please try again.");
+        });
+    });
+});

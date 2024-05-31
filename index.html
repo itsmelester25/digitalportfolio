@@ -1035,7 +1035,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
           <div class="choose animate-box">
-            <form name="Contact Form" action="/forms/success.html" method="post" role="form" class="contact-form" netlify>
+            <form name="Contact Form" method="POST" role="form" class="contact-form" netlify>
               <div class="row form-group">
                 <div class="col-md-6">
                   <input type="text" name="first-name" id="fname" class="form-control" placeholder="Your first name" required>
@@ -1067,7 +1067,9 @@
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary">
               </div>
-      
+              <div id="form-success-message" style="display:none;">
+                <p>Thank you for your message! We will get back to you soon.</p>
+            </div>
             </form>
           </div>
           </div>
