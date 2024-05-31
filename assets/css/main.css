@@ -24,6 +24,27 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+/*--------------------------------------------------------------
+# Scroll Bar
+--------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #161B40;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A5A5A5;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
