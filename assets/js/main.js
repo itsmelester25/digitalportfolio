@@ -291,14 +291,3 @@
   new PureCounter();
 
 })()
-
-/**
- * Google recaptcha 
- */
-window.onload = function() {
-	var recaptcha = document.forms["Contact Form"]["g-recaptcha-response"];
-	recaptcha.required = true;
-	recaptcha.oninvalid = function(e) {
-	  alert("Please check the box, \"I'm not a robot\" in the reCaptcha below.");
-	}
-  }
