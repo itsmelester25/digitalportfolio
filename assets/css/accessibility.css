@@ -106,23 +106,23 @@ input:checked + .slider #moon-icon {
 /*--------------------------------------------------------------
 # Scroll Bar
 --------------------------------------------------------------*/
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
+  body.dark-mode ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #5A5A5A;
-}
+  body.dark-mode ::-webkit-scrollbar-track {
+    background: #5A5A5A;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #f2f2f2;
-  border-radius: 6px;
-}
+  body.dark-mode ::-webkit-scrollbar-thumb {
+    background: #f2f2f2;
+    border-radius: 6px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #161B40;
-}
+  body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #161B40;
+  }
 
 /*--------------------------------------------------------------
 # Back to top button
