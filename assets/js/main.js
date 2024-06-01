@@ -316,14 +316,8 @@
         errorDiv.style.display = 'none';
       }
     });
-
-    const recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]').value;
-    if (!recaptchaResponse) {
-      document.getElementById('recaptcha-error').style.display = 'block';
-      valid = false;
-    } else {
-      document.getElementById('recaptcha-error').style.display = 'none';
-    }
+    
+    checkReCAPTCHA(form, valid);
   
     if (valid) {
       document.getElementById('loading').style.display = 'block';
@@ -355,6 +349,27 @@
     return re.test(String(email).toLowerCase());
   }
   
+  function checkReCAPTCHA(form, valid) {
+    const recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]').value;
+    const recaptchaError = document.getElementById('recaptcha-error');
+    if (!recaptchaResponse) {
+      recaptchaError.textContent = 'Please complete the reCAPTCHA.';
+      recaptchaError.style.display = 'block';
+      valid = false;
+    } else {
+      recaptchaError.style.display = 'none';
+    }
+  }
+  
+  window.addEventListener('load', () => {
+    const recaptchaWidgets = document.querySelectorAll('.g-recaptcha');
+    recaptchaWidgets.forEach(widget => {
+      widget.addEventListener('click', () => {
+        document.getElementById('recaptcha-error').style.display = 'none';
+      });
+    });
+  });
+  
   document.querySelectorAll('input[required], textarea[required]').forEach(field => {
     field.addEventListener('input', () => {
       const errorDiv = field.nextElementSibling;
@@ -369,14 +384,4 @@
         errorDiv.style.display = 'block';
       }
     });
-  });
-
-  document.addEventListener('input', function(event) {
-    if (event.target.name === 'g-recaptcha-response') {
-      if (event.target.value) {
-        document.getElementById('recaptcha-error').style.display = 'none';
-      } else {
-        document.getElementById('recaptcha-error').style.display = 'block';
-      }
-    }
   });
