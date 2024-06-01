@@ -380,3 +380,37 @@
       }
     }
   });
+
+function saveFormData() {
+  const form = document.getElementById('contact-form');
+  const formData = new FormData(form);
+  
+  formData.forEach((value, key) => {
+      localStorage.setItem(key, value);
+  });
+}
+
+function loadFormData() {
+  const form = document.getElementById('contact-form');
+  
+  form.querySelectorAll('input, textarea').forEach(field => {
+      const savedValue = localStorage.getItem(field.name);
+      if (savedValue !== null) {
+          field.value = savedValue;
+      }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  loadFormData();
+});
+
+document.querySelectorAll('input, textarea').forEach(field => {
+  field.addEventListener('input', () => {
+      saveFormData();
+  });
+});
+
+document.getElementById('contact-form').addEventListener('submit', () => {
+  localStorage.clear();
+});
