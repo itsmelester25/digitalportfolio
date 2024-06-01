@@ -370,3 +370,13 @@
       }
     });
   });
+
+  document.addEventListener('input', function(event) {
+    if (event.target.name === 'g-recaptcha-response') {
+      if (event.target.value) {
+        document.getElementById('recaptcha-error').style.display = 'none';
+      } else {
+        document.getElementById('recaptcha-error').style.display = 'block';
+      }
+    }
+  });
