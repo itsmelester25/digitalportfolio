@@ -301,7 +301,7 @@
     const form = event.target;
     const formData = new FormData(form);
     let valid = true;
-
+  
     form.querySelectorAll('input[required], textarea[required]').forEach(field => {
       const errorDiv = field.nextElementSibling;
       if (!field.value.trim()) {
@@ -324,8 +324,9 @@
     } else {
       document.getElementById('recaptcha-error').style.display = 'none';
     }
-
+  
     if (valid) {
+      document.getElementById('loading').style.display = 'block';
       fetch(form.action, {
         method: 'POST',
         body: formData,
@@ -334,6 +335,7 @@
         },
       })
       .then(response => {
+        document.getElementById('loading').style.display = 'none';
         if (response.ok) {
           document.getElementById('form-message').style.display = 'block';
           form.reset();
@@ -342,12 +344,13 @@
         }
       })
       .catch(error => {
+        document.getElementById('loading').style.display = 'none';
         alert('There was an error submitting the form. Please try again.');
       });
     }
   });
-
+  
   function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
