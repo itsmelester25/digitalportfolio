@@ -316,7 +316,7 @@
         errorDiv.style.display = 'none';
       }
     });
-    
+  
     checkReCAPTCHA(form, valid);
   
     if (valid) {
@@ -345,19 +345,22 @@
   });
   
   function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
   
   function checkReCAPTCHA(form, valid) {
     const recaptchaResponse = form.querySelector('[name="g-recaptcha-response"]').value;
     const recaptchaError = document.getElementById('recaptcha-error');
+    const recaptchaReminder = document.getElementById('recaptcha-reminder');
     if (!recaptchaResponse) {
       recaptchaError.textContent = 'Please complete the reCAPTCHA.';
       recaptchaError.style.display = 'block';
+      recaptchaReminder.style.display = 'none';
       valid = false;
     } else {
       recaptchaError.style.display = 'none';
+      recaptchaReminder.style.display = 'block';
     }
   }
   
@@ -366,6 +369,7 @@
     recaptchaWidgets.forEach(widget => {
       widget.addEventListener('click', () => {
         document.getElementById('recaptcha-error').style.display = 'none';
+        document.getElementById('recaptcha-reminder').style.display = 'none';
       });
     });
   });
