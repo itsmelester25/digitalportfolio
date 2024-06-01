@@ -403,11 +403,6 @@ function loadFormData() {
 
 window.addEventListener('DOMContentLoaded', () => {
   loadFormData();
-
-  const savedMessage = document.getElementById('saved-message');
-  if (localStorage.getItem('savedForm')) {
-      savedMessage.style.display = 'block';
-  }
 });
 
 document.querySelectorAll('input, textarea').forEach(field => {
@@ -417,11 +412,5 @@ document.querySelectorAll('input, textarea').forEach(field => {
 });
 
 document.getElementById('contact-form').addEventListener('submit', () => {
-  localStorage.removeItem('savedForm');
-});
-
-document.getElementById('saved-message').addEventListener('click', () => {
-  const savedMessage = document.getElementById('saved-message');
-  savedMessage.style.display = 'none';
-  localStorage.removeItem('savedForm');
+  localStorage.clear();
 });
