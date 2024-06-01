@@ -354,3 +354,19 @@
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
+  
+  document.querySelectorAll('input[required], textarea[required]').forEach(field => {
+    field.addEventListener('input', () => {
+      const errorDiv = field.nextElementSibling;
+      if (field.value.trim() && (field.type !== "email" || validateEmail(field.value))) {
+        errorDiv.style.display = 'none';
+      } else {
+        if (!field.value.trim()) {
+          errorDiv.textContent = `${field.placeholder} is required.`;
+        } else if (field.type === "email" && !validateEmail(field.value)) {
+          errorDiv.textContent = 'Please enter a valid email address.';
+        }
+        errorDiv.style.display = 'block';
+      }
+    });
+  });
