@@ -413,8 +413,7 @@ input:checked + .slider #moon-icon {
 # Footer
 --------------------------------------------------------------*/
   body.dark-mode .footer-logo img {
-    filter: invert(100%);
-    mix-blend-mode: lighten;
+    filter: saturate(0%) brightness(1000%);
   }
 
   body.dark-mode #footer h3 {
