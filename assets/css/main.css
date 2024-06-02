@@ -331,7 +331,7 @@ h6 {
 
 #hero p span {
   color: #161B40;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
 }
 
 #hero .social-links {
@@ -648,7 +648,8 @@ section {
 }
 
 .cert-content a:hover {
-  color: #121212;
+  color: #A5A5A5;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -1305,6 +1306,10 @@ section {
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
+}
+
+#footer a:hover {
+  color: #A5A5A5;
 }
 
 #footer .social-links {

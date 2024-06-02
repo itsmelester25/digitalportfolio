@@ -173,10 +173,18 @@ input:checked + .slider #moon-icon {
 # Hero Section
 --------------------------------------------------------------*/  
   body.dark-mode #hero {
-    filter: grayscale(50%);
+    filter: grayscale(10%);
+  }
+
+  body.dark-mode #hero p {
+    color: #5A5A5A;
   }
 
   body.dark-mode #hero h1 {
+    color: #121212;
+  }
+
+  body.dark-mode #hero p span {
     color: #121212;
   }
 
@@ -404,6 +412,11 @@ input:checked + .slider #moon-icon {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+  body.dark-mode .footer-logo img {
+    filter: invert(100%);
+    mix-blend-mode: lighten;
+  }
+
   body.dark-mode #footer h3 {
     color: #fff;
   }
