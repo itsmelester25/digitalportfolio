@@ -16,7 +16,7 @@
             document.body.classList.add('dark-mode');
             stars.style.display = 'block';
             toggleSwitch.checked = true;
-            toggleText.textContent = '';
+            toggleText.textContent = 'Dark Mode';
         }
     }
 
@@ -24,12 +24,12 @@
         if (this.checked) {
             document.body.classList.add('dark-mode');
             stars.style.display = 'block';
-            toggleText.textContent = '';
+            toggleText.textContent = 'Dark Mode';
             localStorage.setItem('theme', 'dark');
         } else {
             document.body.classList.remove('dark-mode');
             stars.style.display = 'none';
-            toggleText.textContent = '';
+            toggleText.textContent = 'Light Mode';
             localStorage.setItem('theme', 'light');
         }
     });
