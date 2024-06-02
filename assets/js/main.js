@@ -2,7 +2,7 @@
   "use strict";
 
   /**
-   * Easy selector helper function
+   * Light-Dark Mode
    */
 
   document.addEventListener('DOMContentLoaded', (event) => {
