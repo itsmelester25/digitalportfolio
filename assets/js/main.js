@@ -9,10 +9,12 @@
     const toggleSwitch = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
     const toggleText = document.getElementById('toggle-text');
+    const stars = document.getElementById('stars');
 
     if (currentTheme) {
         if (currentTheme === 'dark') {
             document.body.classList.add('dark-mode');
+            stars.style.display = 'block';
             toggleSwitch.checked = true;
             toggleText.textContent = '';
         }
@@ -21,10 +23,12 @@
     toggleSwitch.addEventListener('change', function() {
         if (this.checked) {
             document.body.classList.add('dark-mode');
+            stars.style.display = 'block';
             toggleText.textContent = '';
             localStorage.setItem('theme', 'dark');
         } else {
             document.body.classList.remove('dark-mode');
+            stars.style.display = 'none';
             toggleText.textContent = '';
             localStorage.setItem('theme', 'light');
         }
