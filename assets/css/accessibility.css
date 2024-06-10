@@ -204,11 +204,9 @@ body.dark-mode .back-to-top:hover {
   body.dark-mode #preloader {
     background: #121212;
   }
-  
-  body.dark-mode #preloader:before {
-    border: 6px solid #fff;
-    border-top-color: #121212;
-    border-bottom-color: #121212;
+
+  body.dark-mode #preloader img{
+    filter: saturate(0%) brightness(1000%);
   }
 
 /*--------------------------------------------------------------

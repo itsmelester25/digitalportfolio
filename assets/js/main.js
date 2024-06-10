@@ -156,10 +156,12 @@
   /**
    * Preloader
    */
-  let preloader = select('#preloader');
+  let preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove()
+      setTimeout(() => {
+        preloader.remove();
+      }, 2000);
     });
   }
 
