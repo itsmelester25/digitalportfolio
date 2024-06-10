@@ -1,7 +1,7 @@
 {
     "name": "Lester Chico's Digital Portfolio",
     "short_name": "Lester's Portfolio",
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#161B40",
