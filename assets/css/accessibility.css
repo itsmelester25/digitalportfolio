@@ -2,7 +2,7 @@
 # Light Mode
 --------------------------------------------------------------*/
 body {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #121212;
     transition: background-color 0.3s, color 0.3s;
   }
@@ -96,7 +96,7 @@ input:checked + .slider #moon-icon {
 --------------------------------------------------------------*/
   body.dark-mode {
     background-color: #121212;
-    color: #ffffff;
+    color: #fff;
   }
 
   body.dark-mode #toggle-text {
