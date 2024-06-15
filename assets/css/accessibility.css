@@ -181,8 +181,8 @@ body.dark-mode ::-webkit-scrollbar {
 # Back to top button
 --------------------------------------------------------------*/
 body.dark-mode .back-to-top {
-  background: #121212;
-  border: 1px solid #fff;
+  background: transparent;
+  border: 2px solid #fff;
 }
 
 body.dark-mode .back-to-top:hover {
@@ -282,8 +282,9 @@ body.dark-mode .back-to-top:hover {
   }
 
   body.dark-mode .facts .count-box i {
-    background: #fff;
-    color: #121212;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
   }
 
   body.dark-mode .facts .count-box span {
@@ -297,14 +298,37 @@ body.dark-mode .back-to-top:hover {
     color: #fff;
   }
 
+  body.dark-mode .skills .progress-bar-wrap {
+    background: #5A5A5A;
+  }
+
   body.dark-mode .skills .progress-bar {
-    background-color: #5A5A5A;
+    background-color: #fff;
   }
   
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/  
   body.dark-mode .resume .resume-title {
+    color: #fff;
+  }
+
+  body.dark-mode .btn-download {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #5A5A5A;
+  }
+  
+  body.dark-mode .btn-download:hover,
+  body.dark-mode .btn-download:active {
+    background: #5A5A5A !important;
+    border-color: #fff !important;
+    color: #fff;
+  }
+
+  body.dark-mode .resume .resume-item h5 {
+    background: transparent;
+    border: 1px solid #fff;
     color: #fff;
   }
 
@@ -326,6 +350,7 @@ body.dark-mode .back-to-top:hover {
 --------------------------------------------------------------*/
   body.dark-mode .cert-item {
     background-color: transparent;
+    border: 1px solid #fff;
   }
 
   body.dark-mode .cert-content h3 {
@@ -364,6 +389,7 @@ body.dark-mode .back-to-top:hover {
 --------------------------------------------------------------*/
   body.dark-mode .services .icon-box {
     background: transparent;
+    border: 1px solid #fff;
   }
 
   body.dark-mode .services .icon-box h4 a {
@@ -430,8 +456,8 @@ body.dark-mode .back-to-top:hover {
   body.dark-mode .contact .info .email:hover i,
   body.dark-mode .contact .info .address:hover i,
   body.dark-mode .contact .info .phone:hover i {
-    background: #fff;
-    color: #121212;
+    background: transparent;
+    color: #fff;
   }
 
   body.dark-mode .form-control {
@@ -443,8 +469,8 @@ body.dark-mode .back-to-top:hover {
   }
   
   body.dark-mode .btn-primary {
-    background: #fff;
-    color: #121212;
+    background: transparent;
+    color: #fff;
     border: 2px solid #5A5A5A;
   }
 
@@ -481,8 +507,8 @@ body.dark-mode .back-to-top:hover {
   }
 
   body.dark-mode #footer .social-links a {
-    background: #fff;
-    color: #121212;
+    background: transparent;
+    color: #fff;
   }
 
   body.dark-mode #footer a {
@@ -496,7 +522,6 @@ body.dark-mode .back-to-top:hover {
   body.dark-mode #footer .social-links a:hover {
     background: #121212;
     color: #fff;
-    border: 1px solid #fff;
   }
 
   body.dark-mode #footer .copyright {

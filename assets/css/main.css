@@ -75,7 +75,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #fff;
+  background: transparent;
   color: #161B40;
   border: 1px solid #161B40;
 }
@@ -524,6 +524,23 @@ section {
   color: #161B40;
 }
 
+.download-resume {
+  text-align: center;
+}
+
+.btn-download {
+  background: transparent;
+  color: #161B40;
+  border: 2px solid #161B40;
+}
+
+.btn-download:hover,
+.btn-download:active {
+  background: #161B40;
+  border-color: #161B40;
+  color: #fff;
+}
+
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
@@ -544,6 +561,7 @@ section {
 .resume .resume-item h5 {
   font-size: 16px;
   background: #f7f8f9;
+  color: #161B40;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -1317,7 +1335,6 @@ section {
 #footer .social-links a:hover {
   background: #fff;
   color: #161B40;
-  border: 1px solid #161B40;
   text-decoration: none;
 }
 
