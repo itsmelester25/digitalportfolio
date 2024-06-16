@@ -128,6 +128,7 @@
         top: 0,
         behavior: 'smooth'
       });
+      backToTopButton.blur();
     });
   });  
 
