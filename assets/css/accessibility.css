@@ -180,26 +180,25 @@ body.dark-mode ::-webkit-scrollbar {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-body.dark-mode .progress-circle circle {
-  stroke: #fff;
-}
-
-body.dark-mode .back-to-top {
-  background: transparent;
-}
-
-body.dark-mode .back-to-top:hover,
-body.dark-mode .back-to-top:active {
-    background: transparent;
-    color: #121212;
+  body.dark-mode .progress-circle circle {
+    stroke: #fff;
   }
+
+  body.dark-mode .back-to-top {
+    background: transparent;
+  }
+
+  body.dark-mode .back-to-top:hover,
+  body.dark-mode .back-to-top:active {
+      background: transparent;
+      color: #121212;
+    }
   
   body.dark-mode .back-to-top i {
     color: #fff;
   }
   
-  body.dark-mode .back-to-top:hover i,
-  body.dark-mode .back-to-top:active i {
+  body.dark-mode .back-to-top:hover i {
     color: #5A5A5A;
   }
 
