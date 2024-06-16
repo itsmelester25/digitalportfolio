@@ -93,11 +93,13 @@ h6 {
   line-height: 0;
 }
 
-.back-to-top:hover i {
+.back-to-top:hover i,
+.back-to-top:active i {
   color: #fff;
 }
 
-.back-to-top:hover {
+.back-to-top:hover,
+.back-to-top:active {
   background: #161B40;
   color: #fff;
 }

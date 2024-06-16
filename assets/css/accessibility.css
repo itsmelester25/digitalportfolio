@@ -188,7 +188,8 @@ body.dark-mode .back-to-top {
   background: transparent;
 }
 
-body.dark-mode .back-to-top:hover {
+body.dark-mode .back-to-top:hover,
+body.dark-mode .back-to-top:active {
     background: transparent;
     color: #121212;
   }
@@ -197,7 +198,8 @@ body.dark-mode .back-to-top:hover {
     color: #fff;
   }
   
-  body.dark-mode .back-to-top:hover i {
+  body.dark-mode .back-to-top:hover i,
+  body.dark-mode .back-to-top:active i {
     color: #5A5A5A;
   }
 
