@@ -50,14 +50,37 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+.progress-container {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #161B40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke: #161B40;
+  stroke-width: 3;
+  stroke-dasharray: 113;
+  stroke-dashoffset: 113;
+  transition: stroke-dashoffset 0.4s;
+}
+
+.back-to-top {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  background: transparent;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -66,24 +89,24 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: #161B40;
   line-height: 0;
 }
 
-.back-to-top:hover i{
-  color: #161B40;
+.back-to-top:hover i {
+  color: #fff;
 }
 
 .back-to-top:hover {
-  background: transparent;
-  color: #161B40;
-  border: 1px solid #161B40;
+  background: #161B40;
+  color: #fff;
 }
 
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
 }
+
 
 /*--------------------------------------------------------------
 # Preloader

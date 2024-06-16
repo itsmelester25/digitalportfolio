@@ -102,18 +102,34 @@
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
+  document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    const progressCircle = document.querySelector('.progress-circle circle');
+    const circumference = 2 * Math.PI * 18;
+  
+    window.addEventListener('scroll', function() {
+      const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const scrollPercent = (scrollPosition / scrollTotal) * 100;
+  
+      const offset = circumference - (scrollPercent / 100) * circumference;
+      progressCircle.style.strokeDashoffset = scrollPosition === 0 ? circumference : offset;
+  
+      if (scrollPosition > 100) {
+        backToTopButton.classList.add('active');
       } else {
-        backtotop.classList.remove('active')
+        backToTopButton.classList.remove('active');
       }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
+    });
+  
+    backToTopButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });  
 
   /**
    * Mobile nav toggle
