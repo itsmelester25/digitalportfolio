@@ -177,6 +177,9 @@
   if (preloader && loadingCounter) {
     window.addEventListener('load', () => {
       let counter = 0;
+      setTimeout(() => {
+        loadingCounter.style.opacity = 1;
+      }, 100);
       let interval = setInterval(() => {
         if (counter < 100) {
           counter++;
