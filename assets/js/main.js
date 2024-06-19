@@ -173,11 +173,21 @@
    * Preloader
    */
   let preloader = document.querySelector('#preloader');
-  if (preloader) {
+  let loadingCounter = document.querySelector('#loading-counter');
+  if (preloader && loadingCounter) {
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.remove();
-      }, 2000);
+      let counter = 0;
+      let interval = setInterval(() => {
+        if (counter < 100) {
+          counter++;
+          loadingCounter.textContent = counter + '%';
+        } else {
+          clearInterval(interval);
+          setTimeout(() => {
+            preloader.remove();
+          }, 1500);
+        }
+      }, 30);
     });
   }
 

@@ -213,6 +213,10 @@ body.dark-mode ::-webkit-scrollbar {
     filter: saturate(0%) brightness(1000%);
   }
 
+  body.dark-mode #loading-counter {
+    color: #fff;
+  }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
