@@ -177,6 +177,16 @@ body.dark-mode ::-webkit-scrollbar {
     background: #161B40;
   }
 
+  body.dark-mode * {
+    scrollbar-width: thin;
+    scrollbar-color: #f2f2f2 #161B40;
+  }
+  
+  body.dark-mode body {
+    scrollbar-width: thin;
+    scrollbar-color: #f2f2f2 #161B40;
+  }
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -468,12 +478,30 @@ body.dark-mode ::-webkit-scrollbar {
     color: #fff;
   }
 
+  body.dark-mode input::placeholder,
+  body.dark-mode textarea::placeholder {
+    color: #fff;
+  }
+  
   body.dark-mode .form-control {
-    background-color: #fff;
+    background-color: transparent;
+    border-color: #5A5A5A;
   }
 
-  body.dark-mode .form-control:active, .form-control:focus {
-    border-color: #5A5A5A;
+  body.dark-mode .form-control:active, body.dark-mode .form-control:focus {
+    border-color: #fff;
+  }
+
+  body.dark-mode .contact .contact-form textarea {
+    color: #fff;
+  }
+
+  body.dark-mode input[type="text"] {
+    color: #fff;
+  }
+
+  body.dark-mode input[type="email"] {
+    color: #fff;
   }
   
   body.dark-mode .btn-primary {
