@@ -1,6 +1,7 @@
 const cache_name = 'lesters-portfolio-cache-v1';
 const urlsToCache = [
-  '/'
+  '/',
+  'index.html'
 ];
 
 self.addEventListener('install', event => {
