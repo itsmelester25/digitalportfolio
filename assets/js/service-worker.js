@@ -7,7 +7,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cache_name)
       .then(async cache => {
-        console.log('Opened cache');
+        console.log('Opened cache v1');
         try {
           return await cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })));
         } catch (error) {
