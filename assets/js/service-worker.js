@@ -2,7 +2,10 @@ const cache_name = 'lesters-portfolio-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/portfolio-details.html'
+  '/portfolio-details.html',
+  '/assets/css/main.css',
+  '/assets/css/style.css',
+  '/assets/css/accessibility.css'
 ];
 
 self.addEventListener('install', event => {
