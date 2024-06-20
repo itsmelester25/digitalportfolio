@@ -16,12 +16,13 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cache_name)
-      .then(cache => {
+      .then(async cache => {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })))
-          .catch(error => {
-            console.error('Failed to cache', error);
-          });
+        try {
+          return await cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })));
+        } catch (error) {
+          console.error('Failed to cache', error);
+        }
       })
   );
 });
