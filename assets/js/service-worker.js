@@ -1,14 +1,15 @@
 const cache_name = 'lesters-portfolio-cache-v1';
 const urlsToCache = [
   '/',
-  '/index.html'
+  '/index.html',
+  '/portfolio-details.html'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cache_name)
       .then(cache => {
-        console.log('Opened cache');
+        console.log('Opened cache v1');
         return cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })))
           .catch(error => {
             console.error('Failed to cache', error);
