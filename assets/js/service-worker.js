@@ -17,7 +17,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cache_name)
       .then(cache => {
-        console.log('Opened cache v1');
+        console.log('Opened cache');
         return cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })))
           .catch(error => {
             console.error('Failed to cache', error);
@@ -33,7 +33,15 @@ self.addEventListener('fetch', event => {
         if (response) {
           return response;
         }
-        return fetch(event.request);
+        return fetch(event.request).then(networkResponse => {
+          return caches.open(cache_name).then(cache => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        }).catch(error => {
+          console.error('Fetch failed; returning offline page instead.', error);
+          return caches.match('/index.html');
+        });
       })
   );
 });
