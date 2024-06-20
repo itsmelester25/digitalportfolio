@@ -1,16 +1,16 @@
 const cache_name = 'lesters-portfolio-cache-v1';
 const urlsToCache = [
+  '/',
   '/index.html',
   '/portfolio-details.html',
-  '/css/main.css',
-  '/css/style.css',
-  '/css/accessibility.css',
-  '/img/icon.png',
-  '/img/icon.gif',
-  '/img/hero-bg.jpg',
-  '/img/profile-img.gif',
-  '/js/main.js'
-
+  '/assets/css/main.css',
+  '/assets/css/style.css',
+  '/assets/css/accessibility.css',
+  '/assets/img/icon.png',
+  '/assets/icon.gif',
+  '/assets/hero-bg.jpg',
+  '/assets/img/profile-img.gif',
+  '/assets/js/main.js'
 ];
 
 self.addEventListener('install', event => {
