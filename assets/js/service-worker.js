@@ -1,28 +1,18 @@
 const cache_name = 'lesters-portfolio-cache-v1';
 const urlsToCache = [
   '/',
-  'index.html',
-  'portfolio-details.html',
-  'assets/css/main.css',
-  'assets/css/style.css',
-  'assets/css/accessibility.css',
-  'assets/img/icon.png',
-  'assets/icon.gif',
-  'assets/hero-bg.jpg',
-  'assets/img/profile-img.gif',
-  'assets/js/main.js'
+  '/index.html'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cache_name)
-      .then(async cache => {
-        console.log('Opened cache v1');
-        try {
-          return await cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })));
-        } catch (error) {
-          console.error('Failed to cache', error);
-        }
+      .then(cache => {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache.map(url => new Request(url, { cache: 'reload' })))
+          .catch(error => {
+            console.error('Failed to cache', error);
+          });
       })
   );
 });
