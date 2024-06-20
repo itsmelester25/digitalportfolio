@@ -5,7 +5,12 @@ const urlsToCache = [
   '/portfolio-details.html',
   '/assets/css/main.css',
   '/assets/css/style.css',
-  '/assets/css/accessibility.css'
+  '/assets/css/accessibility.css',
+  '/assets/img/icon.png',
+  '/assets/img/icon.gif',
+  '/assets/img/hero-bg.jpg',
+  '/assets/img/profile-img.gif',
+  '/assets/js/main.js'
 ];
 
 self.addEventListener('install', event => {
