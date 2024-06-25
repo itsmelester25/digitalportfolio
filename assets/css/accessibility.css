@@ -386,6 +386,18 @@ body.dark-mode ::-webkit-scrollbar {
   body.dark-mode .cert-content a:hover {
     color: #5A5A5A;
   }
+
+  body.dark-mode .btn-view-more {
+    background: transparent;
+    color: #fff;
+  }
+  
+  body.dark-mode .btn-view-more:hover,
+  body.dark-mode .btn-view-more:active {
+    background: #5A5A5A !important;
+    border-color: #fff !important;
+    color: #fff;
+  }
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

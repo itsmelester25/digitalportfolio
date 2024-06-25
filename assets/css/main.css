@@ -701,6 +701,17 @@ section {
   text-decoration: none;
 }
 
+.cert-show-more {
+  text-align: center;
+}
+
+.btn-view-more:hover,
+.btn-view-more:active {
+  background: transparent;
+  border-color: #161B40;
+  color: #161B40;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

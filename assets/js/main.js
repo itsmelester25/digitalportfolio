@@ -228,6 +228,42 @@
   }
 
   /**
+   * Certifications 
+   */
+  document.addEventListener("DOMContentLoaded", function() {
+    var showMoreBtn = document.getElementById("show-more-btn");
+    var showMoreText = document.getElementById("show-more-text");
+    var chevronIcon = document.getElementById("chevron-icon");
+    var certItems = document.querySelectorAll(".cert-item");
+    var isOpen = false;
+  
+    certItems.forEach(function(item, index) {
+      if (index >= 3) {
+        item.style.display = "none";
+      }
+    });
+  
+    showMoreBtn.addEventListener("click", function() {
+      certItems.forEach(function(item, index) {
+        if (index >= 3) {
+          if (isOpen) {
+            item.style.display = "none";
+            showMoreText.textContent = "Show More";
+            chevronIcon.classList.remove("fa-chevron-up");
+            chevronIcon.classList.add("fa-chevron-down");
+          } else {
+            item.style.display = "block";
+            showMoreText.textContent = "Show Less";
+            chevronIcon.classList.remove("fa-chevron-down");
+            chevronIcon.classList.add("fa-chevron-up");
+          }
+        }
+      });
+      isOpen = !isOpen;
+    });
+  });
+
+  /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
