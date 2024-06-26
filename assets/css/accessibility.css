@@ -392,12 +392,6 @@ body.dark-mode ::-webkit-scrollbar {
     color: #fff;
   }
   
-  body.dark-mode .btn-view-more:hover,
-  body.dark-mode .btn-view-more:active {
-    background: #5A5A5A !important;
-    border-color: #fff !important;
-    color: #fff;
-  }
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
