@@ -405,7 +405,8 @@ body.dark-mode ::-webkit-scrollbar {
 
   body.dark-mode .portfolio #portfolio-flters li:hover,
   body.dark-mode .portfolio #portfolio-flters li.filter-active {
-    color: #5A5A5A;
+    color: #121212;
+    background-color: #fff;
   }
 
 /*--------------------------------------------------------------
